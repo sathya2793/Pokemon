@@ -1,0 +1,18 @@
+Consider the following JSON dataset -
+https://raw.githubusercontent.com/Biuni/PokemonGO-Pokedex/master/pokedex.j son
+This dataset contains information of all characters (pokemon) of a famous game
+  Pokemon Go. Include this dataset in a JS file as a variable and then write the following functions -
+● Write a function to take pokemon’s name as argument and display the information of that pokemon
+● Write a function that takes pokemon’s name as an argument and find out which all pokemon have that name in their “next_evolution” field.
+● Write a function that take a “Weakness” as an input and gives the names of all pokemon who have that Weakness. (check the weakness array in the dataset)
+
+
+* created the pokemons JSON variable in js
+
+* created the html used the below three functions
+ 
+1)Function- pokemonUser (This function is used to show all the details based on the pokemon name)
+
+2)Function- nextEvolution (This function is used to show next evolutions)
+
+3)Function- weaknessPokemon(This function will display all the weakness pokemon name)

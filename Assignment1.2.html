@@ -1,0 +1,71 @@
+<html>
+
+<head>
+   <h2>Please check the console for the output</h2>
+</head>
+
+<body>
+  <script type="text/javascript" src="pokemon.js"></script>
+  <script>
+    //pokemons value stored in pokemon.js
+    var pokemonDetails = JSON.parse(pokemons); //convert text into a JavaScript object
+
+    //This function is used to show all the details based on the pokemon name
+    function pokemonUser(pokemonName) {
+
+      for (let x in pokemonDetails.pokemon) {
+
+        if (pokemonName == pokemonDetails.pokemon[x].name) { // checking pokemon name is matching or not
+          console.log(pokemonDetails.pokemon[x]); // its display all the details
+        }
+      }
+    }
+
+    //This function is used to show next evolutions
+    function nextEvolution(pokemonUser) {
+
+      for (let x in pokemonDetails.pokemon) {
+
+        if (pokemonUser == pokemonDetails.pokemon[x].name) { // checking pokemon name is matching or not
+
+          var nextEvolutionDetails = [];
+          nextEvolutionDetails = pokemonDetails.pokemon[x]; //stored all the nextEvolution
+         	}
+         }
+          var nextEvolutionPokemon = [];
+
+          nextEvolutionPokemon = nextEvolutionDetails.next_evolution;
+
+          if (nextEvolutionPokemon != undefined) {
+
+            for (let y in nextEvolutionPokemon) {
+
+              console.log(nextEvolutionPokemon[y].name); // it's display all the nextEvolution pokemon name
+            }
+          } else {
+            console.log("next evolution not found"); //it's display if nextEvolution is not found
+          }
+        }
+    //This function will display all the weakness pokemon name
+    function weaknessPokemon(weakness) {
+
+      for (let x in pokemonDetails.pokemon) {
+
+        for (let y in pokemonDetails.pokemon[x].weaknesses) {
+
+          if (weakness == pokemonDetails.pokemon[x].weaknesses[y]) {
+            console.log(pokemonDetails.pokemon[x].name);//it's will display weakness pokemon name
+          }
+        }
+      }
+    }
+    console.log("pokemon user details:")
+    pokemonUser("Pikachu");
+    console.log("Next Evolution pokemon name:")
+    nextEvolution("Charmeleon");
+    console.log("weakness Pokemon name:")
+    weaknessPokemon("Water");
+  </script>
+</body>
+
+</html>
